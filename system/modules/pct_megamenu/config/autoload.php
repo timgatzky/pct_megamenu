@@ -11,24 +11,6 @@
  */
 
 /**
- * Register the namespaces
- */
-ClassLoader::addNamespaces(array
-(
-	'PCT\MegaMenu',
-));
-
-
-/**
- * Register the classes
- */
-ClassLoader::addClasses(array
-(
-	'PCT\MegaMenu\MegaMenu' 			=> 'system/modules/pct_megamenu/PCT/MegaMenu/MegaMenu.php',
-));
-
-
-/**
  * Register the templates
  */
 TemplateLoader::addFiles(array

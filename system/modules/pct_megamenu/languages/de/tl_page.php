@@ -13,9 +13,12 @@
  * permanent text corrections which are update-safe. 
  */
 
-$GLOBALS['TL_LANG']['tl_page']['pct_megamenu'][0]	= 'MegeMenü aktivieren';
-$GLOBALS['TL_LANG']['tl_page']['pct_megamenu'][1]	= 'Aktivieren Sie die MegaMenü-Funktion.';
-$GLOBALS['TL_LANG']['tl_page']['pct_mm_article'][0]	= 'Artikel einfügen';
-$GLOBALS['TL_LANG']['tl_page']['pct_mm_article'][1]	= 'Wählen Sie den Include-Artikel.';
-$GLOBALS['TL_LANG']['tl_page']['pct_mm_replace'][0]	= 'Link ersetzen';
-$GLOBALS['TL_LANG']['tl_page']['pct_mm_replace'][1]	= 'Ist diese Option aktiv, wird der gesamte link ersetzt.';
+$GLOBALS['TL_LANG']['tl_page']['pct_megamenu'][0]		= 'MegeMenü aktivieren';
+$GLOBALS['TL_LANG']['tl_page']['pct_megamenu'][1]		= 'Aktivieren Sie die MegaMenü-Funktion.';
+$GLOBALS['TL_LANG']['tl_page']['pct_mm_article'][0]		= 'Artikel einfügen';
+$GLOBALS['TL_LANG']['tl_page']['pct_mm_article'][1]		= 'Wählen Sie den Include-Artikel.';
+$GLOBALS['TL_LANG']['tl_page']['pct_mm_noreplace'][0]	= 'Den Link nicht ersetzen';
+$GLOBALS['TL_LANG']['tl_page']['pct_mm_noreplace'][1]	= 'Wählen Sie hier und der Link bleibt zusätzlich zum Include-Artikel erhalten.';
+$GLOBALS['TL_LANG']['tl_page']['pct_mm_floating'][0]	= 'Ausrichtung';
+$GLOBALS['TL_LANG']['tl_page']['pct_mm_floating'][1]	= 'Bitte liegen Sie fest, wie der Link zum Include-Artikel ausgerichtet werden soll.';
+

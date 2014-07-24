@@ -18,6 +18,7 @@ $this->loadDataContainer('tl_content');
  * Selector
  */
 $GLOBALS['TL_DCA']['tl_page']['palettes']['__selector__'][] = 'pct_megamenu';
+$GLOBALS['TL_DCA']['tl_page']['palettes']['__selector__'][] = 'pct_mm_noreplace';
 
 /**
  * Palettes
@@ -33,7 +34,8 @@ foreach($GLOBALS['TL_DCA']['tl_page']['palettes'] as $type => $palette)
 /**
  * Subpalettes
  */
-$GLOBALS['TL_DCA']['tl_page']['subpalettes']['pct_megamenu'] = 'pct_mm_article';
+$GLOBALS['TL_DCA']['tl_page']['subpalettes']['pct_megamenu'] = 'pct_mm_article,pct_mm_noreplace';
+$GLOBALS['TL_DCA']['tl_page']['subpalettes']['pct_mm_noreplace'] = 'pct_mm_floating';
 
 /**
  * Fields
@@ -59,4 +61,26 @@ $GLOBALS['TL_DCA']['tl_page']['fields']['pct_mm_article'] = array
 		array('tl_content', 'editArticle')
 	),
 	'sql'                     => "int(10) unsigned NOT NULL default '0'"
+);
+
+$GLOBALS['TL_DCA']['tl_page']['fields']['pct_mm_noreplace'] = array
+(
+	'label'                   => &$GLOBALS['TL_LANG']['tl_page']['pct_mm_noreplace'],
+	'exclude'                 => true,
+	'inputType'               => 'checkbox',
+	'eval'                    => array('tl_class'=>'clr','submitOnChange'=>true),
+	'sql'					  => "char(1) NOT NULL default ''",
+);
+
+
+$GLOBALS['TL_DCA']['tl_page']['fields']['pct_mm_floating'] = array
+(
+	'label'                   => &$GLOBALS['TL_LANG']['tl_page']['pct_mm_floating'],
+	'default'                 => 'above',
+	'exclude'                 => true,
+	'inputType'               => 'radioTable',
+	'options'                 => array('above', 'below'),
+	'eval'                    => array('cols'=>2, 'tl_class'=>'w50'),
+	'reference'               => &$GLOBALS['TL_LANG']['MSC'],
+	'sql'                     => "varchar(32) NOT NULL default ''"
 );

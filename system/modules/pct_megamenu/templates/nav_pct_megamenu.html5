@@ -4,7 +4,17 @@
 <?php
 if($item['pct_megamenu'])
 {
-	$item['link'] = $this->replaceInsertTags('{{insert_article::'.$item['pct_mm_article'].'}}');
+	$include = $this->replaceInsertTags('{{insert_article::'.$item['pct_mm_article'].'}}');
+	// replace the link
+	if(!$item['pct_mm_noreplace'])
+	{
+		$item['link'] = $include;
+	}
+	// do not replace the link
+	else
+	{
+		$item['link'] = ($item['pct_mm_floating'] == 'below' ? $include.'<div class="below">'.$item['link'].'</div>' : '<div class="above">'.$item['link'].'</div>'.$include);
+	}
 }
 ?>
     <?php if ($item['isActive']): ?>
