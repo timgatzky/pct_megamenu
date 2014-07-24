@@ -2,25 +2,41 @@
 <ul class="<?php echo $this->level; ?>">
   <?php foreach ($this->items as $item): ?>
 <?php
+$include = '';
 if($item['pct_megamenu'])
 {
-	$include = $this->replaceInsertTags('{{insert_article::'.$item['pct_mm_article'].'}}');
 	// replace the link
 	if(!$item['pct_mm_noreplace'])
 	{
-		$item['link'] = $include;
+		$item['link'] = $this->replaceInsertTags('{{insert_article::'.$item['pct_mm_article'].'}}');
 	}
-	// do not replace the link
 	else
 	{
-		$item['link'] = ($item['pct_mm_floating'] == 'below' ? $include.'<div class="below">'.$item['link'].'</div>' : '<div class="above">'.$item['link'].'</div>'.$include);
+		$include = $this->replaceInsertTags('{{insert_article::'.$item['pct_mm_article'].'}}');
 	}
+	$item['class'] .= ' megamenu '.$item['pct_mm_floating'];
 }
 ?>
     <?php if ($item['isActive']): ?>
-      <li class="<?php echo $item['class']; ?>"><span class="<?php echo $item['class']; ?>"><?php echo $item['link']; ?></span><?php echo $item['subitems']; ?></li>
+      <li class="<?php echo $item['class']; ?>">
+      	<?php if($item['pct_mm_floating'] == 'above'): ?>
+	      	<span class="<?php echo $item['class']; ?>"><?php echo $item['link']; ?></span>
+	      	 <?php echo $include; ?>
+		  	 <?php else: ?>
+	      	 <?php echo $include; ?>
+		  	<span class="<?php echo $item['class']; ?>"><?php echo $item['link']; ?></span>
+	   	<?php endif; ?>
+      	<?php echo $item['subitems']; ?></li>
     <?php else: ?>
-      <li<?php if ($item['class']): ?> class="<?php echo $item['class']; ?>"<?php endif; ?>><a href="<?php echo $item['href']; ?>" title="<?php echo $item['pageTitle'] ? $item['pageTitle'] : $item['title']; ?>"<?php if ($item['class']): ?> class="<?php echo $item['class']; ?>"<?php endif; ?><?php if ($item['accesskey'] != ''): ?> accesskey="<?php echo $item['accesskey']; ?>"<?php endif; ?><?php if ($item['tabindex']): ?> tabindex="<?php echo $item['tabindex']; ?>"<?php endif; ?><?php if ($item['nofollow']): ?> rel="nofollow"<?php endif; ?><?php echo $item['target']; ?>><?php echo $item['link']; ?></a><?php echo $item['subitems']; ?></li>
+      <li<?php if ($item['class']): ?> class="<?php echo $item['class']; ?>"<?php endif; ?>>
+	      <?php if($item['pct_mm_floating'] == 'above'): ?>
+		      <a href="<?php echo $item['href']; ?>" title="<?php echo $item['pageTitle'] ? $item['pageTitle'] : $item['title']; ?>"<?php if ($item['class']): ?> class="<?php echo $item['class']; ?>"<?php endif; ?><?php if ($item['accesskey'] != ''): ?> accesskey="<?php echo $item['accesskey']; ?>"<?php endif; ?><?php if ($item['tabindex']): ?> tabindex="<?php echo $item['tabindex']; ?>"<?php endif; ?><?php if ($item['nofollow']): ?> rel="nofollow"<?php endif; ?><?php echo $item['target']; ?>><?php echo $item['link']; ?></a>
+		      <?php echo $include; ?>
+	      <?php else: ?>
+		      <?php echo $include; ?>
+			  <a href="<?php echo $item['href']; ?>" title="<?php echo $item['pageTitle'] ? $item['pageTitle'] : $item['title']; ?>"<?php if ($item['class']): ?> class="<?php echo $item['class']; ?>"<?php endif; ?><?php if ($item['accesskey'] != ''): ?> accesskey="<?php echo $item['accesskey']; ?>"<?php endif; ?><?php if ($item['tabindex']): ?> tabindex="<?php echo $item['tabindex']; ?>"<?php endif; ?><?php if ($item['nofollow']): ?> rel="nofollow"<?php endif; ?><?php echo $item['target']; ?>><?php echo $item['link']; ?></a>
+		  <?php endif; ?>
+	  <?php echo $item['subitems']; ?></li>
     <?php endif; ?>
   <?php endforeach; ?>
 </ul>
