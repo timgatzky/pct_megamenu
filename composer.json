@@ -1,0 +1,43 @@
+{
+	"name":"timgatzky/pct_megamenu",
+	"description":"Contao (>= 3.2) extension to create menu entries with included articles",
+	"keywords":["contao","menu","megamenu","pct","premium contao themes"],
+	"type":"contao-module",
+	"homepage":"https://github.com/timgatzky/pct_megamenu",
+	"authors":
+	[
+		{
+			"name":"Tim Gatzky",
+			"homepage":"http://www.tim-gatzky.de",
+			"role":"Interaction-Designer,Developer"
+		}
+	],
+	"support":
+	{
+		"ticket":"https://premiumcontaothemes.zendesk.com/",
+		"issues":"https://github.com/timgatzky/pct_megamenu/issues",
+		"source":"https://github.com/timgatzky/pct_megamenu"
+	},
+	"require":
+	{
+		"php":">=5.3",
+		"contao/core":">=3.2",
+		"contao-community-alliance/composer-installer":"*",
+	},
+	"autoload":
+	{
+	},
+	"replace":
+	{
+	},
+	"extra":
+	{
+		"contao":
+		{
+			"sources":
+			{
+				"":"system/modules/pct_megamenu"
+			}
+		}
+	}
+}
