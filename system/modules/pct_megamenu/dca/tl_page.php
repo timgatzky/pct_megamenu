@@ -55,7 +55,7 @@ $GLOBALS['TL_DCA']['tl_page']['fields']['pct_mm_article'] = array
 	'exclude'                 => true,
 	'inputType'               => 'select',
 	'options_callback'        => array('tl_content', 'getArticles'),
-	'eval'                    => array('mandatory'=>true, 'chosen'=>true, 'submitOnChange'=>true),
+	'eval'                    => array('includeBlankOption'=>true, 'chosen'=>true, 'submitOnChange'=>true),
 	'wizard' => array
 	(
 		array('tl_content', 'editArticle')
