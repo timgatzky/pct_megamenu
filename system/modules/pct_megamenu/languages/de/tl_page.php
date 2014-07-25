@@ -13,7 +13,7 @@
  * permanent text corrections which are update-safe. 
  */
 
-$GLOBALS['TL_LANG']['tl_page']['pct_megamenu'][0]		= 'MegeMenü aktivieren';
+$GLOBALS['TL_LANG']['tl_page']['pct_megamenu'][0]		= 'MegaMenü aktivieren';
 $GLOBALS['TL_LANG']['tl_page']['pct_megamenu'][1]		= 'Aktivieren Sie die MegaMenü-Funktion.';
 $GLOBALS['TL_LANG']['tl_page']['pct_mm_article'][0]		= 'Artikel einfügen';
 $GLOBALS['TL_LANG']['tl_page']['pct_mm_article'][1]		= 'Wählen Sie den Include-Artikel.';
@@ -22,3 +22,7 @@ $GLOBALS['TL_LANG']['tl_page']['pct_mm_noreplace'][1]	= 'Wählen Sie hier und de
 $GLOBALS['TL_LANG']['tl_page']['pct_mm_floating'][0]	= 'Ausrichtung';
 $GLOBALS['TL_LANG']['tl_page']['pct_mm_floating'][1]	= 'Bitte liegen Sie fest, wie der Link zum Include-Artikel ausgerichtet werden soll.';
 
+/**
+ * Legend
+ */
+$GLOBALS['TL_LANG']['tl_page']['pct_megamenu_legend']	= 'MegaMenü';
