@@ -1,5 +1,4 @@
-### 1.0.1
-Fixed: Fixed spelling
-Added: Missing palette legend 
 
 ### 1.0.0
+Fixed: Fixed spelling
+Added: Missing palette legend 

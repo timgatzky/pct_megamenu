@@ -14,7 +14,7 @@
 /**
  * Constants
  */
-define(PCT_MEGAMENU_VERSION, '1.0.1');
+define(PCT_MEGAMENU_VERSION, '1.0.0');
 
 /**
  * Globals
