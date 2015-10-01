@@ -23,13 +23,22 @@ $GLOBALS['TL_DCA']['tl_page']['palettes']['__selector__'][] = 'pct_mm_noreplace'
 /**
  * Palettes
  */
-foreach($GLOBALS['TL_DCA']['tl_page']['palettes'] as $type => $palette)
+if(TL_MODE == 'BE')
 {
-	if(!in_array($type, $GLOBALS['PCT_MEGAMENU']['pageIgnoreList']) && $type != '__selector__')
+	if(!is_array($GLOBALS['PCT_MEGAMENU']['pageIgnoreList']))
 	{
-		$GLOBALS['TL_DCA']['tl_page']['palettes'][$type] = str_replace('type','type;{pct_megamenu_legend},pct_megamenu;',$GLOBALS['TL_DCA']['tl_page']['palettes'][$type]);
+		$GLOBALS['PCT_MEGAMENU']['pageIgnoreList'] = array();
+	}
+	
+	foreach($GLOBALS['TL_DCA']['tl_page']['palettes'] as $type => $palette)
+	{
+		if(!in_array($type, $GLOBALS['PCT_MEGAMENU']['pageIgnoreList']) && $type != '__selector__')
+		{
+			$GLOBALS['TL_DCA']['tl_page']['palettes'][$type] = str_replace('type','type;{pct_megamenu_legend},pct_megamenu;',$GLOBALS['TL_DCA']['tl_page']['palettes'][$type]);
+		}
 	}
 }
+
 
 /**
  * Subpalettes
