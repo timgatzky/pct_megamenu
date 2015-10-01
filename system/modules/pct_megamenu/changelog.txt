@@ -1,5 +1,6 @@
 ### 1.2.0
 Fixed: Wrong article selection when there are more than one root pages (#2)
+Update: Check if Globals array has been created in tl_page
 
 ### 1.1.0
 Added: English language files (#1)
