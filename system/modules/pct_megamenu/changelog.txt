@@ -1,3 +1,7 @@
+### 1.2.1
+Update: Fetch all articles in all root pages
+Update: Add colsN class in nav_pct_megamenu template
+
 ### 1.2.0
 Fixed: Wrong article selection when there are more than one root pages (#2)
 Update: Check if Globals array has been created in tl_page
