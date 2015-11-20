@@ -6,7 +6,7 @@ $include = '';
 if($item['pct_megamenu'])
 {
 	$include = $this->replaceInsertTags('{{insert_article::'.$item['pct_mm_article'].'}}');
-	$item['class'] .= ' megamenu '.$item['pct_mm_floating'];
+	$item['class'] .= ' megamenu '.$item['pct_mm_floating'] . ' cols'.count($this->items);
 }
 ?>
     <?php if ($item['isActive']): ?>
