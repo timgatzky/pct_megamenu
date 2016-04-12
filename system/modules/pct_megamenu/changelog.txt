@@ -1,3 +1,6 @@
+### 1.3.1
+Update: Check if data container array has been loaded already before loading it in dca files
+
 ### 1.3.0
 Update: Fetch all articles in all root pages
 Update: Add colsN class in nav_pct_megamenu template
