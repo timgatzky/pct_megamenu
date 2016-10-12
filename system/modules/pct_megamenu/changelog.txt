@@ -1,3 +1,6 @@
+### 1.3.2
+Update: Do not load tl_content data container directly from tl_page dca file
+
 ### 1.3.1
 Update: Check if data container array has been loaded already before loading it in dca files
 
