@@ -11,12 +11,6 @@
  * @link		http://contao.org
  */
 
-if(!is_array($GLOBALS['TL_DCA']['tl_content']))
-{
-	// load data containers
-	$this->loadDataContainer('tl_content');
-}
-
 /**
  * Selector
  */
