@@ -45,7 +45,7 @@ class TablePage extends \Backend
 			return array();
 		}
 		
-		if(!is_array($GLOBALS['TL_DCA']['tl_content']))
+		if(!is_array($GLOBALS['TL_DCA']['tl_content']) || !isset($GLOBALS['loadDataContainer']['tl_content']))
 		{
 			\Controller::loadDataContainer('tl_content');
 		}
