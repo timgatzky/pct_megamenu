@@ -1,3 +1,6 @@
+### 1.4.0
+Update: Contao 4.4 ready (no changes) (#3)
+
 ### 1.3.2
 Update: Do not load tl_content data container directly from tl_page dca file
 Update: Check via $GLOBALS['loadDataContainer']['tl_content'] if tl_content DCA array has really been loaded and not manually created e.g. in dcaconfig.php before
