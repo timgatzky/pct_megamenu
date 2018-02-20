@@ -64,9 +64,9 @@ class TablePage extends \Backend
 			
 			$dc->activeRecord->pid = $objContents->pid;
 			$articles = $tl_content->getArticles($dc);
-			if(count($articles) > 0 && is_array($articles))
+			if(!empty($articles) && is_array($articles))
 			{
-				$arrReturn += $articles;
+				$arrReturn = array_merge($arrReturn,$articles);
 			}
 			
 			$arrProcessed[] = $objContents->pid;
