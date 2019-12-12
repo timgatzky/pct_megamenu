@@ -13,7 +13,7 @@
 /**
  * Register the namespaces
  */
-ClassLoader::addNamespaces(array
+\Contao\ClassLoader::addNamespaces(array
 (
 	'PCT\MegaMenu',
 ));
@@ -22,7 +22,7 @@ ClassLoader::addNamespaces(array
 /**
  * Register the classes
  */
-ClassLoader::addClasses(array
+\Contao\ClassLoader::addClasses(array
 (
 	'PCT\MegaMenu\TablePage' 				=> 'system/modules/pct_megamenu/PCT/MegaMenu/TablePage.php',
 ));
@@ -30,7 +30,7 @@ ClassLoader::addClasses(array
 /**
  * Register the templates
  */
-TemplateLoader::addFiles(array
+\Contao\TemplateLoader::addFiles(array
 (
 	'nav_pct_megamenu' 					=> 'system/modules/pct_megamenu/templates',
 ));

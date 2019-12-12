@@ -20,7 +20,7 @@ namespace PCT\MegaMenu;
  * Class file
  * TablePage
  */
-class TablePage extends \Backend
+class TablePage extends \Contao\Backend
 {
 	/**
 	 * Import the back end user object
@@ -38,7 +38,7 @@ class TablePage extends \Backend
 	 */
 	public function getArticles($objDC)
 	{
-		$objDatabase = \Database::getInstance();
+		$objDatabase = \Contao\Database::getInstance();
 		$objContents = $objDatabase->prepare("SELECT id FROM tl_content WHERE invisible!=1")->execute();
 		if($objContents->numRows < 1)
 		{
@@ -47,7 +47,7 @@ class TablePage extends \Backend
 		
 		if(!is_array($GLOBALS['TL_DCA']['tl_content']) || !isset($GLOBALS['loadDataContainer']['tl_content']))
 		{
-			\Controller::loadDataContainer('tl_content');
+			\Contao\Controller::loadDataContainer('tl_content');
 		}
 		
 		$dc = clone($objDC);
