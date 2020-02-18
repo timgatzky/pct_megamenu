@@ -1,3 +1,7 @@
+### 1.5.0
+Update: Refractor classes to Contao namespace (#5)
+Update: Contao 4.9 LTS compatibility
+
 ### 1.4.1
 Update: PHP 7.2 compatibility (#4)
 Update: Put constants in quotations for php 7.2
